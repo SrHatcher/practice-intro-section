@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Epilogue';
+    src: url('../fonts/static/Epilogue-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('../fonts/static/Epilogue-Bold.ttf');
+    font-weight: 700;
+}
+
+@supports(font-variation-settings: normal){
+    @font-face {
+        font-family: 'Epilogue';
+        src: url('../fonts/Epilogue-VariableFont_wght.ttf') format('truetype supports variations'),
+            url('../fonts/Epilogue-VariableFont_wght.ttf') format('truetype-variations');
+        font-weight: 500 700;
+
+    }
+}
+
+:root{
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --font: 'Epilogue', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    font-family: var(--font);
+    background-color: var(--almost-white);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 6rem;
+
+    background-color: rgb(250, 103, 103);
+}
+a{
+    text-decoration: none;
+}
+.header__navbar{
+
+}
+.navbar__logo{
+    display: inline-block;
+
+    width: 8.5rem;
+    height: 3rem;
+    margin-inline-start: 1.5rem;
+    margin-block-start: 2rem;
+
+    background-image: url('../images/logo.svg');
+    background-position: center;
+    background-size: 8.5rem;
+    background-repeat: no-repeat;
+}
+.navbar__modal_background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.603);
+
+    /*borar aqui-------------------------------------------------------------------hola!*/
+    display: none;
+}
+.navbar__modal_menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 30rem;
+    height: 100vh;
+
+    background-color: white;
+
+    /*borar aqui-------------------------------------------------------------------hola!*/
+    display: none;
+}
+.navbar__close_button{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    background-image: url('../images/icon-close-menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+.navbar__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    margin-block-start: 9rem;
+    margin-block-end: 5rem;
+
+    list-style: none;
+
+    color: var(--medium-gray);
+}
+.navbar__item, .navbar__list > li > a{
+    margin-inline-end: 3rem;
+
+    cursor: pointer;
+    color: var(--medium-gray);
+}
+.item__arrow{
+    display: inline-block;
+
+    margin-left: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    background-image: url('../images/icon-arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.navbar__sub_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    margin-block-start: 1.8rem;
+    margin-block-end: 1rem;
+
+    list-style: none;
+
+    /*borar aqui-------------------------------------------------------------------hola!*/
+    display: none;
+}
+.navbar__sub_item{
+    display: flex;
+    gap: 1.3rem;
+}
+.navbar__sub_item a{
+    line-height: 2.1rem;
+
+    color: var(--medium-gray);
+}
+.sub_item__todo{
+    display: inline-block;
+
+    width: 2rem;
+    height: auto;
+
+    background-image: url('../images/icon-todo.svg');
+    background-position: bottom;
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+}
+.sub_item__calendar{
+    display: inline-block;
+
+    width: 2rem;
+    height: auto;
+
+    background-image: url('../images/icon-calendar.svg');
+    background-position: bottom;
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+}
+.sub_item__reminders{
+    display: inline-block;
+
+    width: 2rem;
+    height: auto;
+
+    background-image: url('../images/icon-reminders.svg');
+    background-position: bottom;
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+}
+.sub_item__planning{
+    display: inline-block;
+
+    width: 2rem;
+    height: auto;
+
+    background-image: url('../images/icon-planning.svg');
+    background-position: bottom;
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+}
+/*---------- login section on mobile--------------------------------*/
+.navbar__login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+/*-------------------------------------------------------------------*/
+/*---------- login section on desktop--------------------------------*/
+.header__login{
+    display: none;
+}
+/*-------------------------------------------------------------------*/
+.login__login{
+    text-decoration: none;
+
+    color: var(--medium-gray);
+}
+.login__register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 5rem;
+
+    text-decoration: none;
+    
+    border: solid 0.2rem var(--medium-gray);
+    border-radius: 1.3rem;
+    color: var(--medium-gray);
+}
+.header__button{
+    height: 3rem;
+    width: 4rem;
+    margin-inline-end: 1.5rem;
+
+    background-image: url('../images/icon-menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+main{
+    background-color: rgb(158, 158, 247);
+}
+.main__image{}
+.main__content{}
+.content__title{}
+.content__text{}
+.content__button{}
+.content__brands{}
+
+

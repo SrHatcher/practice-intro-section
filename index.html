@@ -4,8 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!--Moder CSS reset-->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <!--my styles-->
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
+  <header>
+    <nav class="header__navbar">
+      <a href="#" class="navbar__logo" aria-label="company logo: go to main page"></a>
+      <div class="navbar__modal_background"></div>
+      <div class="navbar__modal_menu">
+        <button type="button" class="navbar__close_button"></button>
+        <ul class="navbar__list">
+          <li class="navbar__item">Features <span class="item__arrow"></span>
+            <ul class="navbar__sub_list">
+              <li class="navbar__sub_item"><span class="sub_item__todo"></span><a href="#">Todo List</a></li>
+              <li class="navbar__sub_item"><span class="sub_item__calendar"></span><a href="#">Calendar</a></li>
+              <li class="navbar__sub_item"><span class="sub_item__reminders"></span><a href="#">Reminders</a></li>
+              <li class="navbar__sub_item"><span class="sub_item__planning"></span><a href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item">Company <span class="item__arrow"></span>
+            <ul class="navbar__sub_list">
+              <li class="navbar__sub_item"><a href="#">History</a></li>
+              <li class="navbar__sub_item"><a href="#">Our Team</a></li>
+              <li class="navbar__sub_item"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item"><a href="#">Careers</a></li>
+          <li class="navbar__item"><a href="#">About</a></li>
+        </ul>
+        <div class="navbar__login">
+          <a href="#" class="login__login">Login</a>
+          <a href="#" class="login__register">Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <button type="button" class="header__button"></button>
+
+    <div class="header__login">
+      <a href="#" class="login__login">Login</a>
+      <a href="#" class="login__register">Register</a>
+    </div>
+
+    <!--mobile navbar view---------------------------->
+    <!--end of mobile navbar view---------------------->
+  </header>
+
+
+
+
+  <main>
+    <section class="main__image">
+      <picture>
+        <source srcset="./images/image-hero-desktop.png" media="(min-width: 800px)">
+        <img src="./images/image-hero-mobile.png" alt="person holding a computer with shapes around them">
+      </picture>
+    </section>
+    <section class="main__content">
+      <h1 class="content__title">Make remote work</h1>
+      <p class="content__text">Get your team in sync, no matter your lcoation. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button type="button" class="content__button">Learn more</button>
+      <div class="content__brands">
+        <span>Databiz</span>
+        <span>audio phile</span>
+        <span>meet</span>
+        <span>maker</span>
+      </div>
+    </section>
+  </main>
+  <script src="./index.js"></script>
 </body>
 </html>
