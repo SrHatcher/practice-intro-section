@@ -298,6 +298,7 @@ main{
 .content__brands{
     display: flex;
     justify-content: center;
+    gap: 2rem;
 }
 
 .content__brands span{
@@ -327,15 +328,34 @@ main{
     background-size: 8rem 2.5rem;
 }
 
-@media screen and (min-width: 600px) {
-    
+@media screen and (min-width: 670px) {
+    .main__image{
+        align-self: center;
+
+        width: 80%;
+    }
+
+    .main__content{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: 80%;
+    }
 }
 
-@media screen and (min-width: 1030) {
-    
+@media screen and (min-width:800px){
+    .main__image{
+        width: 64rem;
+    }
+
+    .main__content{
+        max-width: 64rem;
+    }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1030px){
     body{
         display: flex;
         align-items: center;
@@ -368,6 +388,9 @@ main{
         background-position: center;
         background-size: 8.5rem;
         background-repeat: no-repeat;
+    }
+    .navbar__modal_background{
+        display: none;
     }
     .navbar__modal_menu{
         position: initial;
@@ -432,6 +455,9 @@ main{
     .header__button{
         display: none;
     }
+}
+
+@media screen and (min-width: 1200px) {
     main{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -449,6 +475,9 @@ main{
 
     .main__image{
         grid-area: image;
+        align-self: none;
+
+        width: auto;
     }
     .main__image img{
         max-width: auto;
@@ -461,6 +490,8 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+
+        max-width: none;
     }
     .content__title{
         margin-block-start: 10rem;
@@ -484,15 +515,16 @@ main{
     .content__brands{
         display: flex;
         justify-content: space-between;
+        gap: 0;
 
-        width: 80%;
+        width: 100%;
     }
     
     .content__brands span{
         display: inline-block;
     
-        width: 10rem;
-        height: 3rem;
+        width: 11rem;
+        height: 5rem;
     
         background-repeat: no-repeat;
         background-position: center;
@@ -500,11 +532,11 @@ main{
     
     .brands__databiz{
         background-image: url('../images/client-databiz.svg');
-        background-size: 10rem;
+        background-size: 11rem ;
     }
     .brands__audiophile{
         background-image: url('../images/client-audiophile.svg');
-        background-size: auto 3rem;
+        background-size: auto 4rem;
     }
     .brands__meet{
         background-image: url('../images/client-meet.svg');
@@ -512,12 +544,24 @@ main{
     }
     .brands__maker{
         background-image: url('../images/client-maker.svg');
-        background-size: 10rem 3rem;
+        background-size: 10rem auto;
     }
 }
 
 @media (hover:hover){
+    .login__login:hover{
+        color: var(--almost-black);
+    }
+    .login__register:hover{    
+        color: var(--almost-black);
+        border: solid 0.2rem var(--almost-black);
+    }
+
     .navbar__item:hover{
+        color: var(--almost-black);
+    }
+
+    .navbar__item a:hover{
         color: var(--almost-black);
     }
 

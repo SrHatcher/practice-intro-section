@@ -13,6 +13,8 @@ function showNavbarMenu(){
 function hideNavbarMenu(){
     modalBackground.classList.toggle('navbar__modal_background--inactive')
     mobileNavbarMenu.classList.toggle('navbar__modal_menu--inactive')
+    companySubList.classList.toggle('navbar__sub_list--inactive', true)
+    featuresSubList.classList.toggle('navbar__sub_list--inactive', true)
 }
 
 function showFeatures(){
@@ -27,3 +29,9 @@ function showCompany(){
 
 featuresArrow.addEventListener('click', showFeatures)
 companyArrow.addEventListener('click', showCompany)
+window.addEventListener('resize', ()=>{
+    modalBackground.classList.toggle('navbar__modal_background--inactive', true)
+    mobileNavbarMenu.classList.toggle('navbar__modal_menu--inactive', true)
+    companySubList.classList.toggle('navbar__sub_list--inactive', true)
+    featuresSubList.classList.toggle('navbar__sub_list--inactive', true)
+})
