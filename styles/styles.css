@@ -51,9 +51,6 @@ header{
 a{
     text-decoration: none;
 }
-.header__navbar{
-
-}
 .navbar__logo{
     display: inline-block;
 
@@ -149,8 +146,6 @@ a{
     margin-block-end: 1rem;
 
     list-style: none;
-
-    /*borar aqui-------------------------------------------------------------------hola!*/
 }
 .navbar__sub_list--inactive{
     display: none;
@@ -332,3 +327,203 @@ main{
     background-size: 8rem 2.5rem;
 }
 
+@media screen and (min-width: 600px) {
+    
+}
+
+@media screen and (min-width: 1030) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-block-start: 1rem;
+    
+        font-size: 1.8rem;
+        font-family: var(--font);
+        background-color: var(--almost-white);
+    }
+
+    header{
+        position: absolute;
+        top: 2rem;
+    }
+    .header__navbar{
+        display: flex;
+        align-items: center;
+    }
+    .navbar__logo{
+        display: inline-block;
+    
+        width: 8.5rem;
+        height: 3rem;
+        margin-inline-start: 5rem;
+        margin-block-start: 1rem;
+    
+        background-image: url('../images/logo.svg');
+        background-position: center;
+        background-size: 8.5rem;
+        background-repeat: no-repeat;
+    }
+    .navbar__modal_menu{
+        position: initial;
+        display: initial;
+    
+        width: auto;
+        height: auto;
+    
+        background-color: transparent;
+    }
+    .navbar__close_button{
+        display: none;
+    }
+    .navbar__list{
+        display: flex;
+        flex-direction: row;
+        gap: 0rem;
+    
+        margin-block-start: 0rem;
+        margin-block-end: 0rem;
+    }
+    .navbar__item{
+        position: relative;
+    }
+    .navbar__login{
+        display: none;
+    }
+
+    .navbar__sub_list{
+        position: absolute;
+        top: 3rem;
+        right: 0;
+
+        width: auto;
+        padding: 2rem 2.5rem;
+    
+        background-color: var(--almost-white);
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem 0.1rem rgba(0, 0, 0, 0.445);
+    }
+    #company__sublist{
+        right: -2rem;
+
+        width: 14rem;
+    }
+    .header__login{
+        display: flex;
+        align-items: center;
+
+        margin-inline-end: 5rem;
+
+        width: 25rem;
+    }
+
+    .login__login{
+        width: 50%;
+    }
+    .login__register{    
+        width: 60%;
+    }
+
+    .header__button{
+        display: none;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 'content image';
+        gap: 15rem;
+    
+        padding: 0 0rem;
+        margin-block-start: 0rem;
+        width: 100%;
+        max-width: 115rem;
+        height: 64rem;
+
+    }
+
+    .main__image{
+        grid-area: image;
+    }
+    .main__image img{
+        max-width: auto;
+        height: 100%;
+        max-height: 64rem;
+    }
+    .main__content{
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .content__title{
+        margin-block-start: 10rem;
+        margin-block-end: 5rem;
+    
+        font-size: 7.5rem;
+        line-height: 7.5rem;
+        text-align: left;
+    }
+    .content__text{
+        padding: 0 13rem 0 0;
+        margin-block-end: 5rem;
+    
+        text-align: left;
+        font-size: 1.8rem;
+    }
+    .content__button{
+        align-self: flex-start;
+        margin-block-end: 10rem;
+    }
+    .content__brands{
+        display: flex;
+        justify-content: space-between;
+
+        width: 80%;
+    }
+    
+    .content__brands span{
+        display: inline-block;
+    
+        width: 10rem;
+        height: 3rem;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .brands__databiz{
+        background-image: url('../images/client-databiz.svg');
+        background-size: 10rem;
+    }
+    .brands__audiophile{
+        background-image: url('../images/client-audiophile.svg');
+        background-size: auto 3rem;
+    }
+    .brands__meet{
+        background-image: url('../images/client-meet.svg');
+        background-size: 10rem;
+    }
+    .brands__maker{
+        background-image: url('../images/client-maker.svg');
+        background-size: 10rem 3rem;
+    }
+}
+
+@media (hover:hover){
+    .navbar__item:hover{
+        color: var(--almost-black);
+    }
+
+    .content__button:hover{
+        background-color: var(--almost-white);
+        border: solid 0.2rem var(--almost-black);
+        color: var(--almost-black);
+    }
+}

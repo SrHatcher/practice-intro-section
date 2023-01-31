@@ -17,10 +17,12 @@ function hideNavbarMenu(){
 
 function showFeatures(){
     featuresSubList.classList.toggle('navbar__sub_list--inactive')
+    companySubList.classList.toggle('navbar__sub_list--inactive', true)
 }
 
 function showCompany(){
     companySubList.classList.toggle('navbar__sub_list--inactive')
+    featuresSubList.classList.toggle('navbar__sub_list--inactive', true)
 }
 
 featuresArrow.addEventListener('click', showFeatures)
