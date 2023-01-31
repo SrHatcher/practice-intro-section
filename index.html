@@ -14,20 +14,20 @@
   <header>
     <nav class="header__navbar">
       <a href="#" class="navbar__logo" aria-label="company logo: go to main page"></a>
-      <div class="navbar__modal_background"></div>
-      <div class="navbar__modal_menu">
-        <button type="button" class="navbar__close_button"></button>
+      <div class="navbar__modal_background navbar__modal_background--inactive"></div>
+      <div class="navbar__modal_menu navbar__modal_menu--inactive">
+        <button type="button" class="navbar__close_button" onclick="hideNavbarMenu()"></button>
         <ul class="navbar__list">
-          <li class="navbar__item">Features <span class="item__arrow"></span>
-            <ul class="navbar__sub_list">
+          <li class="navbar__item" id="features__arrow">Features <span class="item__arrow"></span>
+            <ul class="navbar__sub_list navbar__sub_list--inactive" id="features__sublist">
               <li class="navbar__sub_item"><span class="sub_item__todo"></span><a href="#">Todo List</a></li>
               <li class="navbar__sub_item"><span class="sub_item__calendar"></span><a href="#">Calendar</a></li>
               <li class="navbar__sub_item"><span class="sub_item__reminders"></span><a href="#">Reminders</a></li>
               <li class="navbar__sub_item"><span class="sub_item__planning"></span><a href="#">Planning</a></li>
             </ul>
           </li>
-          <li class="navbar__item">Company <span class="item__arrow"></span>
-            <ul class="navbar__sub_list">
+          <li class="navbar__item" id="company__arrow">Company <span class="item__arrow"></span>
+            <ul class="navbar__sub_list navbar__sub_list--inactive" id="company__sublist">
               <li class="navbar__sub_item"><a href="#">History</a></li>
               <li class="navbar__sub_item"><a href="#">Our Team</a></li>
               <li class="navbar__sub_item"><a href="#">Blog</a></li>
@@ -43,15 +43,12 @@
       </div>
     </nav>
 
-    <button type="button" class="header__button"></button>
+    <button type="button" class="header__button" onclick="showNavbarMenu()"></button>
 
     <div class="header__login">
       <a href="#" class="login__login">Login</a>
       <a href="#" class="login__register">Register</a>
     </div>
-
-    <!--mobile navbar view---------------------------->
-    <!--end of mobile navbar view---------------------->
   </header>
 
 
@@ -66,13 +63,13 @@
     </section>
     <section class="main__content">
       <h1 class="content__title">Make remote work</h1>
-      <p class="content__text">Get your team in sync, no matter your lcoation. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <p class="content__text">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
       <button type="button" class="content__button">Learn more</button>
       <div class="content__brands">
-        <span>Databiz</span>
-        <span>audio phile</span>
-        <span>meet</span>
-        <span>maker</span>
+        <span class="brands__databiz"></span>
+        <span class="brands__audiophile"></span>
+        <span class="brands__meet"></span>
+        <span class="brands__maker"></span>
       </div>
     </section>
   </main>

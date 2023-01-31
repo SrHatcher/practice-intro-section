@@ -32,6 +32,8 @@ html{
 }
 
 body{
+    padding-block-start: 1rem;
+
     font-size: 1.8rem;
     font-family: var(--font);
     background-color: var(--almost-white);
@@ -42,8 +44,9 @@ header{
     align-items: center;
 
     height: 6rem;
-
-    background-color: rgb(250, 103, 103);
+    width: 100%;
+    max-width: 144rem;
+    margin-block-end: 2rem;
 }
 a{
     text-decoration: none;
@@ -64,31 +67,35 @@ a{
     background-size: 8.5rem;
     background-repeat: no-repeat;
 }
+
 .navbar__modal_background{
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
 
     background-color: rgba(0, 0, 0, 0.603);
-
-    /*borar aqui-------------------------------------------------------------------hola!*/
+}
+.navbar__modal_background--inactive{
     display: none;
 }
+
 .navbar__modal_menu{
     position: absolute;
     top: 0;
     right: 0;
 
-    width: 30rem;
+    width: 25rem;
     height: 100vh;
 
     background-color: white;
-
-    /*borar aqui-------------------------------------------------------------------hola!*/
+}
+.navbar__modal_menu--inactive{
     display: none;
 }
+
+
 .navbar__close_button{
     position: absolute;
     top: 2rem;
@@ -144,6 +151,8 @@ a{
     list-style: none;
 
     /*borar aqui-------------------------------------------------------------------hola!*/
+}
+.navbar__sub_list--inactive{
     display: none;
 }
 .navbar__sub_item{
@@ -245,13 +254,81 @@ a{
 }
 
 main{
-    background-color: rgb(158, 158, 247);
-}
-.main__image{}
-.main__content{}
-.content__title{}
-.content__text{}
-.content__button{}
-.content__brands{}
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
+    height: 80vh;
+}
+.main__image{
+    width: 100%;
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content__title{
+    margin-block-end: 1.5rem;
+
+    font-size: 3.4rem;
+    text-align: center;
+
+    color: var(--almost-black);
+}
+.content__text{
+    padding: 0 0.5rem;
+    margin-block-end: 2.5rem;
+
+    text-align: center;
+    font-size: 1.7rem;
+
+    color: var(--medium-gray);
+}
+.content__button{
+    align-self: center;
+    height: 5rem;
+    width: 15rem;
+    margin-block-end: 5rem;
+
+    color: var(--almost-white);
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--almost-black);
+    transition: all ease-in 0.1s;
+}
+.content__button:active{
+    transform: scale(0.9);
+}
+.content__brands{
+    display: flex;
+    justify-content: center;
+}
+
+.content__brands span{
+    display: inline-block;
+
+    width: 8rem;
+    height: 2.5rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brands__databiz{
+    background-image: url('../images/client-databiz.svg');
+    background-size: 8rem;
+}
+.brands__audiophile{
+    background-image: url('../images/client-audiophile.svg');
+    background-size: auto 2.5rem;
+}
+.brands__meet{
+    background-image: url('../images/client-meet.svg');
+    background-size: 8rem;
+}
+.brands__maker{
+    background-image: url('../images/client-maker.svg');
+    background-size: 8rem 2.5rem;
+}
 
