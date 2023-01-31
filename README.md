@@ -10,3 +10,4 @@ Thanks for checking out this front-end coding challenge.
 
 ## Link to the live website:
 
+https://srhatcher.github.io/practice-intro-section/
